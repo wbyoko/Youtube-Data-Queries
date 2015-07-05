@@ -1,2 +1,2 @@
 # Youtube-Data-Queries
-Query Selectors for Youtube data, backed by e2e tests.
+Query Selectors for Youtube data, with e2e tests.
