@@ -10,7 +10,7 @@ var testAttr = function (key, q, webElem) {
       webElem = element(by.css(q.query));
 
   // getText will be default if attr is not used
-  // if (q.text) value = webElem.getText();
+  // if (q.text) value = webElem.getText(); 
 
   if (q.attr) 
     value = webElem.getAttribute(q.attr);
