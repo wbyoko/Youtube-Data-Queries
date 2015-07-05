@@ -108,3 +108,47 @@ pages.search.channels.push({
         }
     }
 });
+
+pages.playlist = {
+    playlists: [],
+    videos: []
+};
+
+pages.playlist.videos.push({
+    "query":".pl-video",
+    "attrs":{
+        "id":{
+            "attr":"data-video-id"
+        },
+        "title":{
+            "attr":"data-title"
+        },
+        "author":{
+            "query":".pl-video-owner a"
+        },
+        "channel":{
+            "query":".pl-video-owner a",
+            "attr":"data-ytid"
+        }
+    }
+});
+
+pages.playlist.playlists.push({
+    "attrs":{
+        "id":{
+            "query":"a.playlist-play-all",
+            "attr":"href",
+            "regex":"list=(.*)$"
+        },
+        "title":{
+            "query":".pl-header-title"
+        },
+        "author":{
+            "query":".pl-header-details a"
+        },
+        "channel":{
+            "query":".pl-header-details a",
+            "attr":"data-ytid"
+        }
+    }
+});
