@@ -9,5 +9,5 @@ gulp.task('default', ['webdriver_update'], function() {
     .pipe(protractor({
         configFile: "test/protractor.conf.js"
     }))
-    .on('error', function(e) { console.trace(e); });
+    .on('error', function(e) { throw e });
 });
