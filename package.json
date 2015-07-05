@@ -1,0 +1,20 @@
+{
+  "name": "Youtube-Data-Queries",
+  "version": "0.0.0",
+  "description": "Query Selectors for Youtube data, backed by e2e tests.",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://wbyoko@github.com/wbyoko/Youtube-Data-Queries.git"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-protractor": "~1.0.0",
+    "protractor": "~2.1.0",
+    "selenium-standalone-jar": "~2.45.0",
+    "chromedriver": "~2.15.1",
+    "phantomjs": "~1.9.17"
+  }
+}
