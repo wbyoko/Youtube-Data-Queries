@@ -152,3 +152,66 @@ pages.playlist.playlists.push({
         }
     }
 });
+
+pages.channel = {
+    channels: [],
+    videos: []
+};
+
+pages.channel.channels.push({
+    "attrs":{
+        "title":{
+            "query":"meta[itemprop=name]",
+            "attr":"content"
+        },
+        "author":{
+            "query":"meta[itemprop=name]",
+            "attr":"content"
+        },
+        "channel":{
+            "query":"meta[itemprop=channelId]",
+            "attr":"content"
+        }
+    }
+});
+
+pages.channel.channels.push({
+    "query":".branded-page-related-channels-item",
+    "attrs":{
+        "title":{
+            "query":".yt-lockup-title a"
+        },
+        "author":{
+            "query":".yt-lockup-title a"
+        },
+        "channel":{
+            "attr":"data-external-id"
+        }
+    }
+});
+
+pages.channel.videos.push({
+    "query":".video-player-view-component",
+    "attrs":{
+        "id":{
+            "query":".video-detail .title a",
+            "attr":"href",
+            "regex":"v=(.*)$"
+        },
+        "title":{
+            "query":".video-detail .title a"
+        }
+    }
+});
+
+pages.channel.videos.push({
+    "query":".yt-lockup-video",
+    "attrs":{
+        "id":{
+            "attr":"data-context-item-id"
+        },
+        "title":{
+            "query":".yt-lockup-title a"
+        }
+    }
+});
